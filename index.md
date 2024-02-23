@@ -35,6 +35,8 @@ Deep Kernel Learning is a hybrid model using the expressiveness of a Neural Netw
 
 
 ### XGBoost
+The XGBoost technique stands for "Extreme Gradient Boosting" and is a scalable tree-boosting system. It has become popular in these years since it has won many Kaggle competitions with higher accuracy and higher efficiency. XGBoost integrates the predictions from multiple decision trees like Random Forest, but it combines multiple machine learning algorithms to boost the decision trees, such as gradient descent, linear regression with regularization, and "exact greedy algorithms". We can say it's like a stronger version of Random Forest The model predicts the final results by the weighted sum of predictions of all decision trees. Unlike Random Forest, the boosting process minimizes the bias and reduces the overfitting.
+
 
 ### PINN
 
