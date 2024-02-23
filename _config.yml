@@ -1,4 +1,4 @@
-title: Emulating The Effects of Climate Change with Deep Learning
+title: DSC180B Capstone Project
 author:
   name: Jack Kai Lim, Keith Kwong and Jun Zhang
   email: jklim@ucsd.edu, khkwong@ucsd.edu, juz018@ucsd.edu
@@ -31,6 +31,7 @@ plugins:
 # in order as they should show up.
 header_pages:
   - about.md
+  - appendix.md
 
 # Set to `true` to show excerpts on the homepage.
 #show_excerpts: false
