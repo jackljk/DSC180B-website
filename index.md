@@ -9,13 +9,13 @@ layout: page
 ---
 # Emulating the Effect of Climate Change with Deep Learning
 
+
 <!-- Interactive Map -->
 Temp interactive map placeholder
-
+<div style="text-align:center">
 <img src="assets/images/temp map.png">
-
+</div>
 Will contain D3 map of CMIP6 data as an introduction into what we are comparing and predicting
-
 
 ## Introduction
 
@@ -43,7 +43,9 @@ Deep Kernel Learning is a hybrid model using the expressiveness of a Neural Netw
 
 Temp interactive map placeholder
 
+<div style="text-align:center">
 <img src="assets/images/temp map.png">
+</div>
 
 Will contain D3 map of results from the models (mean throughout a set number of years with interactive zoom and buttons to select the model and the variable to display)
 
