@@ -20,7 +20,6 @@ Will contain D3 map of CMIP6 data as an introduction into what we are comparing 
 ## Introduction
 
 
-
 ## Data
 
 
@@ -45,14 +44,49 @@ Will contain D3 map of results from the models (mean throughout a set number of 
 
 
 ### Tables of Results
-Table of NRMSE Results
+Displayed are the results of the models using special evaluation metrics to describe the spatial variability and the global variability of the predictions to more accurately compare the models. 
 
-Title 1 | Title 2 | Title 3 | Title 4
+$$
+\begin{equation}
+    NRMSE_s = \sqrt{\langle(|x_{i, j, t}|_t - |y_{i, j, t, n}|_{n, t})^2\rangle}/|\langle y_{i, j}\rangle|_{t, n}
+\end{equation}
+$$
+
+$$
+\begin{equation}
+    NRMSE_g = \sqrt{|(\langle x_{i, j, t}\rangle - \langle|y_{i, j, t, n}|_n\rangle)^2|_t} / |\langle y_{i, j} \rangle|_{t, n}
+\end{equation}
+$$
+
+$$
+\begin{equation}
+    NRMSE_t = NRMSE_s + \alpha \times NRMSE_g
+\end{equation}
+$$
+
+##### Gaussian Process
+
+Model | Base Gaussian Process | Gaussian Process with Deep Kernel learning  | Difference | 
 --- | --- | --- | ---
-lorem | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit
-lorem ipsum dolor sit amet | lorem ipsum dolor sit amet consectetur | lorem ipsum dolor sit amet | lorem ipsum dolor sit
-lorem ipsum dolor | lorem ipsum | lorem | lorem ipsum
-lorem ipsum dolor | lorem ipsum dolor sit | lorem ipsum dolor sit amet | lorem ipsum dolor sit amet consectetur
+Spatial | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit
+Global | lorem ipsum dolor sit amet consectetur | lorem ipsum dolor sit amet | lorem ipsum dolor sit
+Total | lorem ipsum | lorem | lorem ipsum
+
+##### Neural Networks
+
+Model | Base Convoluted Neural Network | Physics Informed Neural Network  | Difference | 
+--- | --- | --- | ---
+Spatial | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit
+Global | lorem ipsum dolor sit amet consectetur | lorem ipsum dolor sit amet | lorem ipsum dolor sit
+Total | lorem ipsum | lorem | lorem ipsum
+
+##### Forests
+
+Model | Base Random Forest | XGBoost  | Difference | 
+--- | --- | --- | ---
+Spatial | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit
+Global | lorem ipsum dolor sit amet consectetur | lorem ipsum dolor sit amet | lorem ipsum dolor sit
+Total | lorem ipsum | lorem | lorem ipsum
 
 ## Discussion
 
