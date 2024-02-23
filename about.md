@@ -16,5 +16,5 @@ Project by:
 - **Jun Zhang**
     - [GitHub](https://github.com/junzhh)
     - Email: juz018@ucsd.edu
-Mentored by **Duncan Watson-Parris**
+- Mentored by **Duncan Watson-Parris**
 
