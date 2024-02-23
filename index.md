@@ -9,13 +9,13 @@ layout: page
 ---
 # Emulating the Effect of Climate Change with Deep Learning
 
+
 <!-- Interactive Map -->
 Temp interactive map placeholder
-
+<div style="text-align:center">
 <img src="assets/images/temp map.png">
-
+</div>
 Will contain D3 map of CMIP6 data as an introduction into what we are comparing and predicting
-
 
 ## Introduction
 
@@ -25,12 +25,17 @@ What you just played around with is the combined predictions of what the Earth's
 Will contain image of how PINN is built
 
 ## Data
-
+The input data for our three machine learning models are from the Norwegian Earth System Model, which is generated from NorESM2 model and contains historical and future emission data. This generated dataset also is a part of the sixth coupled model intercomparison project. The data is multi-dimensional and set up in xarray table format, which includes emission data of CO<sub>2</sub>, SO<sub>2</sub>, CH<sub>4</sub>, and Black Carbon from different time, longitudes, and latitudes.
 
 ## Models
 
 
-### Deep Kernel Learning
+### Deep Kernel Learning 
+Deep Kernel Learning is a hybrid model using the expressiveness of a Neural Network and combining it with the probabilistic modeling of a Gaussian Process. This is done by using the Neural Network to learn the parameters of the kernel function of the Gaussian Process, which is possible due to neural networks abiltiy to learn complex non-linear functions. Which improves the predictive performance of the Gaussian Process.
+
+**Here is a graphical depiction of a  Deep Kernel Learning Model**
+<object type="image/svg+xml" data="assets/svgs/graph.svg">Your browser does not support SVG</object>
+
 
 ### XGBoost
 
@@ -43,7 +48,9 @@ One of the best performing deep learning models for many tasks is the Neural Net
 
 Temp interactive map placeholder
 
+<div style="text-align:center">
 <img src="assets/images/temp map.png">
+</div>
 
 Will contain D3 map of results from the models (mean throughout a set number of years with interactive zoom and buttons to select the model and the variable to display)
 

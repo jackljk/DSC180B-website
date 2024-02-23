@@ -1,7 +1,7 @@
 title: Emulating The Effects of Climate Change with Deep Learning
 author:
-  name: GitHub User
-  email: your-email@domain.com
+  name: Jack Kai Lim, Keith Kwong and Jun Zhang
+  email: jklim@ucsd.edu, khkwong@ucsd.edu, juz018@ucsd.edu
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
@@ -45,7 +45,7 @@ minima:
   # solarized-light	   Light variant of solarized color scheme.
   # solarized-dark	   Dark variant of solarized color scheme.
   # solarized	         Adaptive skin for solarized color scheme skins.
-  skin: dark
+  skin: classic
   
   # Minima date format.
   # The default value is "%b %d, %Y" (e.g. Nov 14, 2023) 
