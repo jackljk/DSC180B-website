@@ -6,8 +6,9 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: page
+title: Emulating the Effect of Climate Change with Deep Learning
 ---
-# Emulating the Effect of Climate Change with Deep Learning
+
 
 
 <!-- Interactive Map -->
