@@ -96,7 +96,7 @@ Spatial | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit
 Global | lorem ipsum dolor sit amet consectetur | lorem ipsum dolor sit amet | lorem ipsum dolor sit
 Total | lorem ipsum | lorem | lorem ipsum
 
-##### Forests
+##### Random Forests
 
 Model | Base Random Forest | XGBoost  | Difference | 
 --- | --- | --- | ---
