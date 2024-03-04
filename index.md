@@ -8,7 +8,6 @@
 layout: page
 title: Emulating the Effect of Climate Change with Deep Learning
 ---
-# Emulating the Effect of Climate Change with Deep Learning
 
 Temp interactive map placeholder
 <div style="text-align:center">
