@@ -16,11 +16,12 @@ function changeModelNorESM() {
     let model = document.getElementById("NorESM_Var_select").value;
     console.log(model);
     let maps = document.getElementsByClassName("NorESM_map"); 
-    Array.from(maps).forEach(map => {
-        if (map.classList.contains(model)) {
-            map.classList.remove("hidden");
+    console.log(maps);
+    for (let i = 0; i < maps.length; i++) {
+        if (maps[i].id == model) {
+            maps[i].classList.remove("hidden");
         } else {
-            map.classList.add("hidden");
+            maps[i].classList.add("hidden");
         }
-    });
+    }
 }

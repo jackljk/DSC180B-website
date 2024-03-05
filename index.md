@@ -12,10 +12,10 @@ title: Emulating the Effect of Climate Change with Deep Learning
 
 <div style="text-align:center">
 <select id="NorESM_Var_select" onchange="changeModelNorESM()">
-  <option value="tas">Temperature</option>
-  <option value="dtr">Diurnal Temperature Range</option>
-  <option value="pr">Precipitation</option>
-  <option value="pr90">90th Percentile Precipitation</option>
+  <option value="NorESM_tas">Temperature</option>
+  <option value="NorESM_dtr">Diurnal Temperature Range</option>
+  <option value="NorESM_pr">Precipitation</option>
+  <option value="NorESM_pr90">90th Percentile Precipitation</option>
 </select>
 <div id="NorESM_tas" class="NorESM_map">{%- include interactive_models/NorESM/tas_map.html -%}</div>
 <div id="NorESM_dtr" class="NorESM_map hidden">{%- include interactive_models/NorESM/dtr_map.html -%}</div>
