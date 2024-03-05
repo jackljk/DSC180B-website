@@ -14,7 +14,6 @@ title: Emulating the Effect of Climate Change with Deep Learning
 <!-- Interactive Map -->
 Temp interactive map placeholder
 <div style="text-align:center">
-<img src="assets/images/temp map.png">
 </div>
 Will contain D3 map of CMIP6 data as an introduction into what we are comparing and predicting
 
@@ -52,7 +51,12 @@ Will contain image of how PINN is built
 Temp interactive map placeholder
 
 <div style="text-align:center">
-<img src="assets/images/temp map.png">
+<select id="models_select" onchange="changeModel()">
+  <option value="CNN">CNN</option>
+  <option value="PINN">PINN</option>
+</select>
+<div id="CNN_tas">{%- include interactive_models/CNN_tas.html -%}</div>
+<div id="PINN_tas" class="hidden">{%- include interactive_models/PINN_tas.html -%}</div>
 </div>
 
 Will contain D3 map of results from the models (mean throughout a set number of years with interactive zoom and buttons to select the model and the variable to display)
