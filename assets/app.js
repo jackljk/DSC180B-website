@@ -1,13 +1,14 @@
 function changeModel() {
     let model = document.getElementById("models_select").value
-    console.log(model)
-    if(model == "CNN"){
-        document.getElementById("CNN_tas").classList.remove("hidden")
-        document.getElementById("PINN_tas").classList.add("hidden")
-    }
-    else{
-        document.getElementById("CNN_tas").classList.add("hidden")
-        document.getElementById("PINN_tas").classList.remove("hidden")
+    let variable = document.getElementById("variable_select").value
+    let show = model + "_" + variable
+    let maps = document.getElementsByClassName("models");
+    for (let i = 0; i < maps.length; i++) {
+        if (maps[i].id == show) {
+            maps[i].classList.remove("hidden");
+        } else {
+            maps[i].classList.add("hidden");
+        }
     }
 }
 
