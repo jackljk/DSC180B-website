@@ -148,7 +148,7 @@ Spatial | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit
 Global | lorem ipsum dolor sit amet consectetur | lorem ipsum dolor sit amet | lorem ipsum dolor sit
 Total | lorem ipsum | lorem | lorem ipsum
 
-##### Forests
+##### Random Forests
 
 Model | Base Random Forest | XGBoost  | Difference | 
 --- | --- | --- | ---
@@ -159,3 +159,4 @@ Total | lorem ipsum | lorem | lorem ipsum
 
 
 ## Conclusion
+To move forward from ClimateBench, we aim to extend the three baseline models Gaussian Process, Random Forest, and CNN to predict various climate data by given aerosol emission input data. We applied Deep Kernel Learning, XGBoost, and PINN to improve the aboved three baseline models. Most of the new models beat up the scores of baseline model from ClimateBench. By looking at the predictions, policymakers and the general public can assess which emission pathway is most suitable for achieving the goal of reducing global warming. In the future field of climate science, various techniques and algorithms of Deep Learning models are waiting for people to explore and research. Therefore, people can learn which emission path is most suitable for reducing the effect of climate change, and create a better environment for all.
