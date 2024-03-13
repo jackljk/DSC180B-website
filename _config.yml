@@ -6,7 +6,7 @@ author:
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
-  DSC 180B Group B03 Final Project
+  DSC 180B Group B03 Final Project:
   Github: https://github.com/jackljk/ClimateBench-Plus
   Report:
 
