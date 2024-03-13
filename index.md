@@ -24,12 +24,14 @@ What you just played around with is the combined predictions of what the Earth's
 <div id="NorESM_dtr" class="NorESM_map hidden">{%- include interactive_models/NorESM/dtr_map.html -%}</div>
 <div id="NorESM_pr" class="NorESM_map hidden">{%- include interactive_models/NorESM/pr_map.html -%}</div>
 <div id="NorESM_pr90" class="NorESM_map hidden">{%- include interactive_models/NorESM/pr90_map.html -%}</div>
-
 </div>
 
 
 ## Data
 The input data for our three machine learning models are from the Norwegian Earth System Model, which is generated from NorESM2 model and contains historical and future emission data. This generated dataset also is a part of the sixth coupled model intercomparison project. The data is multi-dimensional and set up in xarray table format, which includes emission data of CO<sub>2</sub>, SO<sub>2</sub>, CH<sub>4</sub>, and Black Carbon from different time, longitudes, and latitudes.
+
+### Preprocessing for Deep Kernel Learning / Gaussian Process 
+We can see from the cleaned data for the Deep Kernel Learning and Gaussian Process models, for CO2 and CH4 there is only 1 dimension and for SO2 and BC has 5 dimensions. The reason for this is becauseSO2 and BC would only stay in the atmosphere for a few days to a week. While CH4 would stay in the atmosphere for years and millennia for CO2. This is why they have more dimensions, as they would be out of our atmosphere before they get mixed completely into our environment and have a global effect. Hence, the dimensions give us the distributions of SO2 and BC to account for where they are being emitted. We do this in order to maintain the spatial and temporal variability of the emissions which otherwise could be lost due to the high dimensionality of the data and Gaussian Process's inability to handle high dimensional data.
 
 
 ## Models
@@ -42,6 +44,12 @@ Deep Kernel Learning is a hybrid model using the expressiveness of a Neural Netw
 <div style="display: flex; justify-content: center;">
   <object type="image/svg+xml" data="assets/svgs/graph.svg" width="500" height="500">Your browser does not support SVG</object>
 </div>
+
+Looking at the figure, we first have the input data, X, which then goes through hidden layers, which in the neural network portion of the hybrid model. In this process, the neural network basically learns a representation and underlying patterns of the data. Which is then fed into the parametric layer, kernelizing the neural networks representation to be used in the Gaussian Process, which using the learned representation, learns the underlying distribution of the training data. This is then used to make predictions on the test data. 
+
+For building the mode, we initializing the kernels, following the approach outlined in Climate Bench V1.0, we assgined a distinct kernel for each input dimension to guide the Deep Neural Network towards more favorable outcomes and preventing the model from converging to suboptimal minima. Next, we will then perform a grid search to choose the best hyperparameters for the model. For more information on the training process, please refer to the training section in the appendix.
+
+
 
 ### XGBoost
 The XGBoost technique stands for "Extreme Gradient Boosting" and is a scalable tree-boosting system. It has became popular in these years since it has won many Kaggle competitions with higher accuracy and higher efficiency. XGBoost integrates the predictions from multiple decision trees like Random Forest, but it combines multiple machine learning algorithms to boost the decision trees, such as gradient descent, linear regression with regularization, and "exact greedy algorithms". We can say it's like a stronger version of Random Forest The model predict the final results by weighted sum of predictions of all decision trees. Unlike Random Forest, the boosting porcess minimizes the bias and reduce the overfitting.
