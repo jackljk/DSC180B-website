@@ -20,6 +20,8 @@ What you just played around with is the combined predictions of what the Earth's
   <option value="NorESM_pr90">90th Percentile Precipitation</option>
 </select>
 
+
+
 <div id="NorESM_tas" class="NorESM_map">{%- include interactive_models/NorESM/tas_map.html -%}</div>
 <div id="NorESM_dtr" class="NorESM_map hidden">{%- include interactive_models/NorESM/dtr_map.html -%}</div>
 <div id="NorESM_pr" class="NorESM_map hidden">{%- include interactive_models/NorESM/pr_map.html -%}</div>
@@ -82,36 +84,35 @@ Temp interactive map placeholder
   <option value="pr">Precipitation</option>
   <option value="pr90">90th Percentile Precipitation</option>
 </select>
-<div id="CNN_tas" class="models">{%- include interactive_models/CNN_tas.html -%}</div>
-<div id="CNN_dtr" class="models hidden">{%- include interactive_models/CNN_dtr.html -%}</div>
-<div id="CNN_pr" class="models hidden">{%- include interactive_models/CNN_pr.html -%}</div>
-<div id="CNN_pr90" class="models hidden">{%- include interactive_models/CNN_pr90.html -%}</div>
+<div id="CNN_tas" class="models">{%- include interactive_models/CNN/CNN_tas.html -%}</div>
+<div id="CNN_dtr" class="models hidden">{%- include interactive_models/CNN/CNN_dtr.html -%}</div>
+<div id="CNN_pr" class="models hidden">{%- include interactive_models/CNN/CNN_pr.html -%}</div>
+<div id="CNN_pr90" class="models hidden">{%- include interactive_models/CNN/CNN_pr90.html -%}</div>
 
-<div id="PINN_tas" class="models hidden">{%- include interactive_models/PINN_tas.html -%}</div>
-<div id="PINN_dtr" class="models hidden">{%- include interactive_models/PINN_dtr.html -%}</div>
-<div id="PINN_pr" class="models hidden">{%- include interactive_models/PINN_pr.html -%}</div>
-<div id="PINN_pr90" class="models hidden">{%- include interactive_models/PINN_pr90.html -%}</div>
+<div id="PINN_tas" class="models hidden">{%- include interactive_models/PINN/PINN_tas.html -%}</div>
+<div id="PINN_dtr" class="models hidden">{%- include interactive_models/PINN/PINN_dtr.html -%}</div>
+<div id="PINN_pr" class="models hidden">{%- include interactive_models/PINN/PINN_pr.html -%}</div>
+<div id="PINN_pr90" class="models hidden">{%- include interactive_models/PINN/PINN_pr90.html -%}</div>
 
-<div id="RF_tas" class="models hidden">{%- include interactive_models/RF_tas.html -%}</div>
-<div id="RF_dtr" class="models hidden">{%- include interactive_models/RF_dtr.html -%}</div>
-<div id="RF_pr" class="models hidden">{%- include interactive_models/RF_pr.html -%}</div>
-<div id="RF_pr90" class="models hidden">{%- include interactive_models/RF_pr90.html -%}</div>
+<div id="RF_tas" class="models hidden">{%- include interactive_models/RF/RF_tas.html -%}</div>
+<div id="RF_dtr" class="models hidden">{%- include interactive_models/RF/RF_dtr.html -%}</div>
+<div id="RF_pr" class="models hidden">{%- include interactive_models/RF/RF_pr.html -%}</div>
+<div id="RF_pr90" class="models hidden">{%- include interactive_models/RF/RF_pr90.html -%}</div>
 
-<div id="XG_tas" class="models hidden">{%- include interactive_models/XG_tas.html -%}</div>
-<div id="XG_dtr" class="models hidden">{%- include interactive_models/XG_dtr.html -%}</div>
-<div id="XG_pr" class="models hidden">{%- include interactive_models/XG_pr.html -%}</div>
-<div id="XG_pr90" class="models hidden">{%- include interactive_models/XG_pr90.html -%}</div>
+<div id="XG_tas" class="models hidden">{%- include interactive_models/XGB/XG_tas.html -%}</div>
+<div id="XG_dtr" class="models hidden">{%- include interactive_models/XGB/XG_dtr.html -%}</div>
+<div id="XG_pr" class="models hidden">{%- include interactive_models/XGB/XG_pr.html -%}</div>
+<div id="XG_pr90" class="models hidden">{%- include interactive_models/XGB/XG_pr90.html -%}</div>
 
-<div id="GP_tas" class="models hidden">{%- include interactive_models/GP_tas.html -%}</div>
-<div id="GP_dtr" class="models hidden">{%- include interactive_models/GP_dtr.html -%}</div>
-<div id="GP_pr" class="models hidden">{%- include interactive_models/GP_pr.html -%}</div>
-<div id="GP_pr90" class="models hidden">{%- include interactive_models/GP_pr90.html -%}</div>
-</div>
+<div id="GP_tas" class="models hidden">{%- include interactive_models/GP/GP_tas.html -%}</div>
+<div id="GP_dtr" class="models hidden">{%- include interactive_models/GP/GP_dtr.html -%}</div>
+<div id="GP_pr" class="models hidden">{%- include interactive_models/GP/GP_pr.html -%}</div>
+<div id="GP_pr90" class="models hidden">{%- include interactive_models/GP/GP_pr90.html -%}</div>
 
-<div id="DKL_tas" class="models hidden">{%- include interactive_models/DKL_tas.html -%}</div>
-<div id="DKL_dtr" class="models hidden">{%- include interactive_models/DKL_dtr.html -%}</div>
-<div id="DKL_pr" class="models hidden">{%- include interactive_models/DKL_pr.html -%}</div>
-<div id="DKL_pr90" class="models hidden">{%- include interactive_models/DKL_pr90.html -%}</div>
+<div id="DKL_tas" class="models hidden">{%- include interactive_models/DKL/DKL_tas.html -%}</div>
+<div id="DKL_dtr" class="models hidden">{%- include interactive_models/DKL/DKL_dtr.html -%}</div>
+<div id="DKL_pr" class="models hidden">{%- include interactive_models/DKL/DKL_pr.html -%}</div>
+<div id="DKL_pr90" class="models hidden">{%- include interactive_models/DKL/DKL_pr90.html -%}</div>
 </div>
 
 Will contain D3 map of results from the models (mean throughout a set number of years with interactive zoom and buttons to select the model and the variable to display)
