@@ -143,19 +143,155 @@ $$
 
 ##### Gaussian Process vs. Gaussian Process with Deep Kernel Learning
 
-Model | Base Gaussian Process | Gaussian Process with Deep Kernel learning  | Difference | 
---- | --- | --- | ---
-Spatial | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit
-Global | lorem ipsum dolor sit amet consectetur | lorem ipsum dolor sit amet | lorem ipsum dolor sit
-Total | lorem ipsum | lorem | lorem ipsum
+<table>
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th colspan="3">Deep Kernel Learning</th>
+            <th colspan="3">GP from Reproduction</th>
+            <th colspan="3">Difference</th>
+        </tr>
+        <tr>
+            <th>Variable</th>
+            <th>Global</th>
+            <th>Spatial</th>
+            <th>Total</th>
+            <th>Global</th>
+            <th>Spatial</th>
+            <th>Total</th>
+            <th>Global</th>
+            <th>Spatial</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>TAS</td>
+            <td>0.0458</td>
+            <td>0.0752</td>
+            <td><strong>0.3044</strong></td>
+            <td>0.0437</td>
+            <td>0.0906</td>
+            <td>0.3089</td>
+            <td>0.0021</td>
+            <td>-0.0154</td>
+            <td>-0.0045</td>
+        </tr>
+        <tr>
+            <td>DTR</td>
+            <td>1.5602</td>
+            <td>8.4860</td>
+            <td><strong>16.2872</strong></td>
+            <td>2.6495</td>
+            <td>9.1950</td>
+            <td>22.4425</td>
+            <td>-1.0893</td>
+            <td>-0.7090</td>
+            <td>-6.1553</td>
+        </tr>
+        <tr>
+            <td>PR</td>
+            <td>0.3169</td>
+            <td>2.4195</td>
+            <td><strong>4.0041</strong></td>
+            <td>0.3784</td>
+            <td>2.3301</td>
+            <td>4.2223</td>
+            <td>-0.0615</td>
+            <td>0.0894</td>
+            <td>-0.2182</td>
+        </tr>
+        <tr>
+            <td>PR90</td>
+            <td>0.4133</td>
+            <td>2.4919</td>
+            <td><strong>4.5582</strong></td>
+            <td>0.3955</td>
+            <td>2.6048</td>
+            <td>4.5821</td>
+            <td>0.0178</td>
+            <td>-0.1129</td>
+            <td>-0.0239</td>
+        </tr>
+    </tbody>
+</table>
+
 
 ##### Convoluted Neural Networks vs. Physics Informed Neural Network
 
-Model | Base Convoluted Neural Network | Physics Informed Neural Network  | Difference | 
---- | --- | --- | ---
-Spatial | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit
-Global | lorem ipsum dolor sit amet consectetur | lorem ipsum dolor sit amet | lorem ipsum dolor sit
-Total | lorem ipsum | lorem | lorem ipsum
+<table>
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th colspan="3">PINN</th>
+            <th colspan="3">CNN from Reproduction</th>
+            <th colspan="3">Difference</th>
+        </tr>
+        <tr>
+            <th>Variable</th>
+            <th>Global</th>
+            <th>Spatial</th>
+            <th>Total</th>
+            <th>Global</th>
+            <th>Spatial</th>
+            <th>Total</th>
+            <th>Global</th>
+            <th>Spatial</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>TAS</td>
+            <td>0.0428</td>
+            <td>0.1021</td>
+            <td>0.3164</td>
+            <td>0.0440</td>
+            <td>0.0966</td>
+            <td>0.3167</td>
+            <td>-0.0012</td>
+            <td>0.0055</td>
+            <td>-0.0003</td>
+        </tr>
+        <tr>
+            <td>DTR</td>
+            <td>0.9371</td>
+            <td>8.3310</td>
+            <td>13.0166</td>
+            <td>1.2263</td>
+            <td>8.4313</td>
+            <td>14.5632</td>
+            <td>-0.2892</td>
+            <td>-0.1003</td>
+            <td>-1.5466</td>
+        </tr>
+        <tr>
+            <td>PR</td>
+            <td>0.1998</td>
+            <td>2.1588</td>
+            <td>3.1582</td>
+            <td>0.1776</td>
+            <td>2.2642</td>
+            <td>3.1526</td>
+            <td>0.0222</td>
+            <td>-0.1054</td>
+            <td>0.0056</td>
+        </tr>
+        <tr>
+            <td>PR90</td>
+            <td>0.3159</td>
+            <td>2.7057</td>
+            <td>4.2857</td>
+            <td>0.3726</td>
+            <td>2.5163</td>
+            <td>4.3796</td>
+            <td>-0.0567</td>
+            <td>0.1894</td>
+            <td>-0.0939</td>
+        </tr>
+    </tbody>
+</table>
+
 
 ##### Random Forests vs. XGBoost
 
