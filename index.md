@@ -30,10 +30,38 @@ What you just played around with is the combined predictions of what the Earth's
 
 
 ## Data
-The input data for our three machine learning models are from the Norwegian Earth System Model, which is generated from NorESM2 model and contains historical and future emission data. This generated dataset also is a part of the sixth coupled model intercomparison project. The data is multi-dimensional and set up in xarray table format, which includes emission data of CO<sub>2</sub>, SO<sub>2</sub>, CH<sub>4</sub>, and Black Carbon from different time, longitudes, and latitudes.
+The input data for our three machine learning models are from the Norwegian Earth System Model, which is generated from NorESM2 model and contains historical and future emission data. This generated dataset also is a part of the sixth coupled model intercomparison project. The data is multi-dimensional and set up in xarray table format, which includes emission data of CO<sub>2</sub>, SO<sub>2</sub>, CH<sub>4</sub>, and Black Carbon(BC) from a different time, longitudes, and latitudes.
+
+<table>
+    <thead>
+        <tr>
+            <th><strong>Input Variables</strong></th>
+            <th><strong>Output Variables</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>CO<sub>2</sub></td>
+            <td>Temperature</td>
+        </tr>
+        <tr>
+            <td>SO<sub>2</sub></td>
+            <td>Daily Diurnal Temperature Range</td>
+        </tr>
+        <tr>
+            <td>CH<sub>4</sub></td>
+            <td>Precipitation</td>
+        </tr>
+        <tr>
+            <td>Black Carbon (BC)</td>
+            <td>90<sup>th</sup> Percentile Precipitation</td>
+        </tr>
+    </tbody>
+</table>
 
 ### Preprocessing for Deep Kernel Learning / Gaussian Process 
-We can see from the cleaned data for the Deep Kernel Learning and Gaussian Process models, for CO2 and CH4 there is only 1 dimension and for SO2 and BC has 5 dimensions. The reason for this is becauseSO2 and BC would only stay in the atmosphere for a few days to a week. While CH4 would stay in the atmosphere for years and millennia for CO2. This is why they have more dimensions, as they would be out of our atmosphere before they get mixed completely into our environment and have a global effect. Hence, the dimensions give us the distributions of SO2 and BC to account for where they are being emitted. We do this in order to maintain the spatial and temporal variability of the emissions which otherwise could be lost due to the high dimensionality of the data and Gaussian Process's inability to handle high dimensional data.
+We can see from the cleaned data for the Deep Kernel Learning and Gaussian Process models, for CO<sub>2</sub> and CH<sub>4</sub> there is only 1 dimension, and for SO<sub>2</sub> and BC has 5 dimensions. The reason for this is because SO<sub>2</sub> and BC would only stay in the atmosphere for a few days to a week. While CH<sub>4</sub> would stay in the atmosphere for years and millennia for CO2. This is why they have more dimensions, as they would be out of our atmosphere before they get mixed completely into our environment and have a global effect. Hence, the dimensions give us the distributions of SO2 and BC to account for where they are being emitted. We do this in order to maintain the spatial and temporal variability of the emissions which otherwise could be lost due to the high dimensionality of the data and Gaussian Process's inability to handle high dimensional data.
+
 
 
 ## Models
@@ -293,7 +321,7 @@ $$
 </table>
 
 
-##### Random Forests vs. XGBoost
+##### Random Forest vs. XGBoost
 
 <table>
     <thead>
@@ -368,8 +396,5 @@ $$
     </tbody>
 </table>
 
-## Discussion
-
-
 ## Conclusion
-To move forward from ClimateBench, we aim to extend the three baseline models Gaussian Process, Random Forest, and CNN to predict various climate data by given aerosol emission input data. We applied Deep Kernel Learning, XGBoost, and PINN to improve the aboved three baseline models. Most of the new models beat up the scores of baseline model from ClimateBench. By looking at the predictions, policymakers and the general public can assess which emission pathway is most suitable for achieving the goal of reducing global warming. In the future field of climate science, various techniques and algorithms of Deep Learning models are waiting for people to explore and research. Therefore, people can learn which emission path is most suitable for reducing the effect of climate change, and create a better environment for all.
+To move forward from ClimateBench, we aim to extend the three baseline models Gaussian Process, Random Forest, and CNN to predict various climate data by given aerosol emission input data. We applied Deep Kernel Learning, XGBoost, and PINN to improve the above three baseline models. Most of the new models beat up the scores of the baseline models from ClimateBench. The Physics Informed Neural Network has the best scores among of the model. By looking at the predictions, policymakers and the general public can assess which emission pathway is most suitable for achieving the goal of reducing global warming. In the future field of climate science, various techniques and algorithms of Deep Learning models are waiting for people to explore and research. Therefore, people can learn which emission path is most suitable for reducing the effect of climate change, and create a better environment for all.
