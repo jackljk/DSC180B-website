@@ -1,12 +1,12 @@
 title: DSC180B Capstone Project
-author:
-  name: Jack Kai Lim, Keith Kwong and Jun Zhang
-  email: jklim@ucsd.edu, khkwong@ucsd.edu, juz018@ucsd.edu
+authors:
+  - name: Jack Kai Lim | Keith Kwong | Jun Zhang
+    email: jklim@ucsd.edu | khkwong@ucsd.edu | juz018@ucsd.edu
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
-  DSC 180B Group B03 Final Project:
+  ClimateBench-Plus an extension of ClimateBench, a benchmarking suite for climate models.
 
 # Build settings
 

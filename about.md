@@ -4,7 +4,6 @@ title: Contributions
 permalink: /about/
 ---
 
-## Contributions
 Project by:
 
 - **Jack Kai Lim**

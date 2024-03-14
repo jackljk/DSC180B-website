@@ -15,9 +15,7 @@ function changeModel() {
 
 function changeModelNorESM() {
     let model = document.getElementById("NorESM_Var_select").value;
-    console.log(model);
     let maps = document.getElementsByClassName("NorESM_map"); 
-    console.log(maps);
     for (let i = 0; i < maps.length; i++) {
         if (maps[i].id == model) {
             maps[i].classList.remove("hidden");
@@ -26,4 +24,24 @@ function changeModelNorESM() {
         }
     }
 }
+
+window.addEventListener('load', () => {
+    console.log('loaded')
+    const loading1 = document.getElementById('loading-sign-1')
+    loading1.classList.add('hidden')
+    const nor_esm = document.getElementById('NorESM_tas')
+    const select = document.getElementById("NorESM_Var_select")
+    nor_esm.classList.remove('hidden')
+    select.classList.remove('hidden')
+
+    const loading2 = document.getElementById('loading-sign-2')
+    loading2.classList.add('hidden')
+    const models = document.getElementById('CNN_tas')
+    const select1 = document.getElementById("models_select")
+    const select2 = document.getElementById("variable_select")
+    models.classList.remove('hidden')
+    select1.classList.remove('hidden')
+    select2.classList.remove('hidden')
+
+})
 
