@@ -16,7 +16,7 @@ $$
 \end{equation}
 $$
 
-where $g(x_i, w)$ is a non-linear mapping of the weights, given by the feed foward of the Deep Neural Network e.g a Convolutional Neural Network which are parameterized by the weights $w$. 
+where $$g(x_i, w)$$ is a non-linear mapping of the weights, given by the feed foward of the Deep Neural Network e.g a Convolutional Neural Network which are parameterized by the weights $$w$$. 
 
 The loss is then back propagated via the <strong>log marginal likelihood</strong> for the network to learn the feature representation, which is given as,
 
@@ -26,7 +26,7 @@ $$
 \end{equation}
 $$
 
-and the derivative of the loss is computed using the chain rule, which gives an implicit derivative with respect to the $n x n$ covariance matrix as follows,
+and the derivative of the loss is computed using the chain rule, which gives an implicit derivative with respect to the $$n x n$$ covariance matrix as follows,
 
 $$
 \begin{equation}

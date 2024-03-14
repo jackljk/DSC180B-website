@@ -172,7 +172,7 @@ $$
 \end{equation}
 $$
 
-The NRMSE (Normalized Root Mean Square Error) is a measure of the error between the predicted and actual values, but in this case, they are modified to account for the spatial and global variability of the predictions. $NRMSE_s$ is the normalize global mean root-mean square error, and $NRMSE_g$ is $NRMSE$ in the global mean. The equations also includes a weighing function to take the decreasing grid-cell area towards the north and south poles which is defined as follows,
+The NRMSE (Normalized Root Mean Square Error) is a measure of the error between the predicted and actual values, but in this case, they are modified to account for the spatial and global variability of the predictions. $$NRMSE_s$$ is the normalize global mean root-mean square error, and $$NRMSE_g$$ is $$NRMSE$$ in the global mean. The equations also includes a weighing function to take the decreasing grid-cell area towards the north and south poles which is defined as follows,
 
 $$
 \begin{equation}
@@ -180,7 +180,7 @@ $$
 \end{equation}
 $$
 
-and the co-efficient $\alpha$ is chosen to be 5 from the [ClimateBench](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021MS002954) paper, in order to provide equal weightage between the measure.
+and the co-efficient $$\alpha$$ is chosen to be 5 from the [ClimateBench](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021MS002954) paper, in order to provide equal weightage between the measure.
 
 The reason, we are using these eveluation metric is to be able to compare directly the performances for our models against the models from the paper. And using the same evalutation metric will give us the most 1-1 comparison.
 
