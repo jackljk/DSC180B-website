@@ -141,7 +141,7 @@ $$
 \end{equation}
 $$
 
-##### Gaussian Process
+##### Gaussian Process vs. Gaussian Process with Deep Kernel Learning
 
 Model | Base Gaussian Process | Gaussian Process with Deep Kernel learning  | Difference | 
 --- | --- | --- | ---
@@ -149,7 +149,7 @@ Spatial | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit
 Global | lorem ipsum dolor sit amet consectetur | lorem ipsum dolor sit amet | lorem ipsum dolor sit
 Total | lorem ipsum | lorem | lorem ipsum
 
-##### Neural Networks
+##### Convoluted Neural Networks vs. Physics Informed Neural Network
 
 Model | Base Convoluted Neural Network | Physics Informed Neural Network  | Difference | 
 --- | --- | --- | ---
@@ -157,13 +157,81 @@ Spatial | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit
 Global | lorem ipsum dolor sit amet consectetur | lorem ipsum dolor sit amet | lorem ipsum dolor sit
 Total | lorem ipsum | lorem | lorem ipsum
 
-##### Random Forests
+##### Random Forests vs. XGBoost
 
-Model | Base Random Forest | XGBoost  | Difference | 
---- | --- | --- | ---
-Spatial | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit
-Global | lorem ipsum dolor sit amet consectetur | lorem ipsum dolor sit amet | lorem ipsum dolor sit
-Total | lorem ipsum | lorem | lorem ipsum
+<table>
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th colspan="3">XGBoost</th>
+            <th colspan="3">Random Forest from Reproduction</th>
+            <th colspan="3">Difference</th>
+        </tr>
+        <tr>
+            <th>Variable</th>
+            <th>Global</th>
+            <th>Spatial</th>
+            <th>Total</th>
+            <th>Global</th>
+            <th>Spatial</th>
+            <th>Total</th>
+            <th>Global</th>
+            <th>Spatial</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>TAS</td>
+            <td>0.1367</td>
+            <td>0.2273</td>
+            <td>0.9107</td>
+            <td>0.3979</td>
+            <td>0.4525</td>
+            <td>2.4419</td>
+            <td>-0.3044</td>
+            <td>-0.2746</td>
+            <td>-1.7965</td>
+        </tr>
+        <tr>
+            <td>DTR</td>
+            <td>2.8948</td>
+            <td>10.5215</td>
+            <td>24.9953</td>
+            <td>2.7712</td>
+            <td>13.1610</td>
+            <td>27.0172</td>
+            <td>0.1213</td>
+            <td>-1.9044</td>
+            <td>-1.2981</td>
+        </tr>
+        <tr>
+            <td>PR</td>
+            <td>0.3851</td>
+            <td>4.0115</td>
+            <td>5.9368</td>
+            <td>0.9235</td>
+            <td>5.5991</td>
+            <td>10.2167</td>
+            <td>-0.5828</td>
+            <td>-2.2157</td>
+            <td>-5.1300</td>
+        </tr>
+        <tr>
+            <td>PR90</td>
+            <td>0.3745</td>
+            <td>4.7913</td>
+            <td>6.6639</td>
+            <td>0.9955</td>
+            <td>6.7342</td>
+            <td>11.7122</td>
+            <td>-0.4744</td>
+            <td>-0.8491</td>
+            <td>-3.2214</td>
+        </tr>
+    </tbody>
+</table>
+
 ## Discussion
 
 
