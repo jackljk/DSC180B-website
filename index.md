@@ -462,5 +462,5 @@ While our work with the PINN ultimately ended up with little improvement to the 
 ## Appendix
 > [link to appendix](/DSC180B-website/appendix/)
 
-## Report
+## Link to Full Report
 > <a href="https://drive.google.com/file/d/1fvHoHD4qTlPqePXpEx5iNl7kcbCkiyfT/view">link to report</a>
