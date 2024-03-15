@@ -307,7 +307,7 @@ The reason, we are using these eveluation metric is to be able to compare direct
             <td>DTR</td>
             <td>0.9371</td>
             <td>8.3310</td>
-            <td><strong>13.016</strong>6</td>
+            <td><strong>13.0166</strong></td>
             <td>1.2263</td>
             <td>8.4313</td>
             <td>14.5632</td>
