@@ -319,10 +319,10 @@ The reason, we are using these eveluation metric is to be able to compare direct
             <td>PR</td>
             <td>0.1998</td>
             <td>2.1588</td>
-            <td>3.1582</td>
+            <td><strong>3.1582</strong></td>
             <td>0.1776</td>
             <td>2.2642</td>
-            <td><strong>3.1526</strong></td>
+            <td>3.1526</td>
             <td>0.0222</td>
             <td>-0.1054</td>
             <td>0.0056</td>
@@ -461,3 +461,4 @@ While our work with the PINN ultimately ended up with little improvement to the 
 
 ## Appendix
 > [link to appendix](/DSC180B-website/appendix/)
+
