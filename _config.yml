@@ -1,7 +1,7 @@
 title: DSC180B Capstone Project
 authors:
   - name: Jack Kai Lim | Keith Kwong | Jun Zhang
-    email: jklim@ucsd.edu | khkwong@ucsd.edu | juz018@ucsd.edu
+  - email: jklim@ucsd.edu | khkwong@ucsd.edu | juz018@ucsd.edu
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
