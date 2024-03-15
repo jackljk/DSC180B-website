@@ -463,4 +463,4 @@ While our work with the PINN ultimately ended up with little improvement to the 
 > [link to appendix](/DSC180B-website/appendix/)
 
 ## Report
-
+<a href="assets/report.pdf.pdf">Link to Report</a>
