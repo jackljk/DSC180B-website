@@ -462,3 +462,6 @@ While our work with the PINN ultimately ended up with little improvement to the 
 ## Appendix
 > [link to appendix](/DSC180B-website/appendix/)
 
+## Report
+<a href="https://climateanalyticslab.slack.com/files/U05UV1WQ2NA/F06P8CU8S95/report.pdf">link to our report</a>
+
