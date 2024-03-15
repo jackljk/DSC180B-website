@@ -89,3 +89,71 @@ In the figure below shows the plot for the global mean average timeseries, weigh
 In the figure below, we can see the timeseries plotted with the uncertainty obtained from the Gaussian Process. One interesting thing to note is that for the Temperature variable, the uncertainty not only covers all of the NorESM2 variations but also has a relatively small variance, capturing the underlying patterns well. However, for the other variables, the variance is large, making it difficult to interpret the uncertainty.
 
 ![Deep Kernel Learning Time Series with uncertainty](/DSC180B-website/assets\images\dkl_timeseries_with_uncertainty.png)
+
+### XGBoost 
+Details of XGBoost training
+
+#### XGBoost Best Hyperparameters
+Here are the best parameters for different output variables:
+<table>
+    <thead>
+        <tr>
+            <th>Parameters</th>
+            <th>Temperature</th>
+            <th>Diurnal Temperature Range</th>
+            <th>Precipitation</th>
+            <th>90th Precipitation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>subsample</td>
+            <td>0.950</td>
+            <td>1.000</td>
+            <td>1.000</td>
+            <td>1.000</td>
+        </tr>
+        <tr>
+            <td>n_estimators</td>
+            <td>100</td>
+            <td>300</td>
+            <td>160</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>min_child_weight</td>
+            <td>7</td>
+            <td>5</td>
+            <td>7</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>max_depth</td>
+            <td>15</td>
+            <td>10</td>
+            <td>15</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>learning_rate</td>
+            <td>0.073</td>
+            <td>0.052</td>
+            <td>0.052</td>
+            <td>0.010</td>
+        </tr>
+        <tr>
+            <td>gamma</td>
+            <td>0.300</td>
+            <td>0.500</td>
+            <td>0.400</td>
+            <td>0.300</td>
+        </tr>
+        <tr>
+            <td>colsample_bytree</td>
+            <td>0.850</td>
+            <td>1.000</td>
+            <td>0.550</td>
+            <td>0.700</td>
+        </tr>
+    </tbody>
+</table>
