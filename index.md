@@ -91,10 +91,16 @@ The XGBoost technique stands for "Extreme Gradient Boosting" and is a scalable t
 <img src="assets/images/xgboost.png">
 
 ### PINN
-One of the best performing deep learning models for many tasks is the Neural Network, for our case, the Convolutional Neural Network. While it has been traditionally used for image recognition tasks, by slicing the data into images of aerosol distribution over time, a basic CNN architechture was created by Professor Duncan Watson Parris that emulated Earth's climate pretty accurately. To improve upon it and to increase explanability of how the model functions, our Physics informed neural network incorporates physical constraints brought on by known physical equations. Currently, there is no one known set of equations that is used to model the relationbetween the aerosols being released and the temperature and precipitation, but previous work done on Finite amplitude Impulse Response (FaIR) models (Leach et al. 2021) have proposed a set of ordinary differential equations that they have proven to be adequate in modeling the relation between emissions of greenhouse gases and mean climate response. By incorporating these equations into the existing loss function of the original CNN architecture outlined in ClimateBench, the resulting PINN will produce results that are more robust and physically constrained.
+One of the best performing deep learning models for many tasks is the Neural Network, for our case, the Convolutional Neural Network. While it has been traditionally used for image recognition tasks, by slicing the data into images of aerosol distribution over time, a basic CNN architechture was created by Professor Duncan Watson Parris that emulated Earth's climate pretty accurately. To improve upon it and to increase explanability of how the model functions, our Physics informed neural network incorporates physical constraints brought on by known physical equations. Currently, there is no one known set of equations that is used to model the relationbetween the aerosols being released and the temperature and precipitation, but previous work done on Finite amplitude Impulse Response (FaIR) models (Leach et al. 2021) have proposed a set of ordinary differential equations that they have proven to be adequate in modeling the relation between emissions of greenhouse gases and mean climate response. By incorporating these equations into the existing loss function of the original CNN architecture outlined in ClimateBench, the resulting PINN will produce results that are more robust and physically constrained. The process of how a PINN is built is pictured below.
+<div style="display: flex; justify-content: center;">
+    <img src="assets/images/PINN.png">
+</div>
 
-<img src="assets/images/temp map.png">
-Will contain image of how PINN is built
+The first step is to take an existing neural network architechture before incorporating the physical differential eqautions in as a seperate loss value that is added on top of the original mean squared error. The differential equation used for this PINN in particular is as follows from FaIRv2.0.
+
+<div style="display: flex; justify-content: center;">
+    <img src="assets/images/FAIR.JPG">
+</div>
 
 ## Results
 Below are the predictions made by our models between the years 2015-2100. And are displayed in the interactive maps below which depict the predictions of the models ranging from the original models of the Gaussian Process, CNN and Random Forest that we built during our reproduction of the original [Climate Bench](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021MS002954) paper, to the new models of Deep Kernel Learning, XGBoost and PINN. The predictions are for the average surface temperature, diurnal temperature range, precipitation, and 90th percentile precipitation. 
